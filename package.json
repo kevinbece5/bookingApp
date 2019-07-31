@@ -1,0 +1,38 @@
+{
+  "name": "booking-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinbece5/bookingApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevinbece5/bookingApp/issues"
+  },
+  "homepage": "https://github.com/kevinbece5/bookingApp#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "react-hot-loader": "^4.6.3",
+    "svg-inline-loader": "^0.8.0",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "react-dom": "^16.7.0",
+    "react": "^16.7.0",
+    "styled-components": "^4.3.1"
+  }
+}
