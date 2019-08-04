@@ -12,7 +12,6 @@ export default class Booker extends React.Component {
 
     toggleModal = () => this.setState({ toggleModal: !this.state.toggleModal });
 
-
     render() {
         return (
             <Styles.Container>
@@ -25,7 +24,7 @@ export default class Booker extends React.Component {
                 </Styles.BookingsBtn>
                 </Styles.ButtonContainer>
                 {this.state.toggleModal ?
-                    <Modal toggleModal={this.toggleModal} />
+                    <Modal updateBookings={this.props.updateBookings} toggleModal={this.toggleModal} />
                     :
                     null
                 }

@@ -82,12 +82,8 @@ export default class Modal extends React.Component {
         let formItems = _.omit(this.state, ['showModal', 'focused', 'error', 'errors']);
         if (!this.checkErrors()) {
             axios.post('/createBooking', formItems)
-                .then(() => {
-                    this.props.toggleModal();
-                })
-                .catch(() => {
-                    this.props.toggleModal();
-                })
+                .then(() => this.props.updateBookings())
+                .then(() => this.props.toggleModal())
         }
     }
 
