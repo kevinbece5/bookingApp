@@ -29,11 +29,11 @@ module.exports = {
     extensions: ['*', '.js', '.jsx']
   },
   //hot reloafer
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ],
-  //When running npm start the output of dev server will be to this folder
-  devServer: {
-    contentBase: './dist'
-  }
+  // plugins: [
+  //   new webpack.HotModuleReplacementPlugin()
+  // ],
+  // //When running npm start the output of dev server will be to this folder
+  // devServer: {
+  //   contentBase: './dist'
+  // }
 };
