@@ -51,3 +51,12 @@ export const Address = styled.div`
     flex-direction: column;
     width: 20%;
 `;
+
+export const BookingsBtn = styled.button`
+    font-size: 14px;
+    color: #333333;
+    width: 128px;
+    height: 29px;
+    background-color: #F29648;
+    border-radius: 5px;
+`;

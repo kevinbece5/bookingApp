@@ -8,10 +8,13 @@ export default class App extends React.Component {
         super(props);
         this.state = {
             updateBookings: false,
+            filter: 'all',
         }
     }
 
     updateBookings = () => this.setState({ updateBookings: !this.state.updateBookings });
+    updateFilter = (value) => this.setState({ filter: value });
+
 
     render() {
         return (
@@ -20,8 +23,8 @@ export default class App extends React.Component {
             // list of bookings will go here 
             <div >
                 <Header />
-                <Booker updateBookings={this.updateBookings} />
-                <Bookings updateBookings={this.state.updateBookings} bookingsUpdated={this.updateBookings} />
+                <Booker updateFilter={this.updateFilter} updateBookings={this.updateBookings} />
+                <Bookings filter={this.state.filter} updateBookings={this.state.updateBookings} bookingsUpdated={this.updateBookings} />
             </div>
         )
     }
