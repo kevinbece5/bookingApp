@@ -53,18 +53,22 @@ export default class Bookings extends React.Component {
                 <Styles.Table>
                     {
                         this.state.bookings.length ?
-                            this.state.bookings.map((i) => (
-                                <Styles.Row>
-                                    <Styles.Item>{i.name}</Styles.Item>
-                                    <Styles.Item>{i.email}</Styles.Item>
-                                    <Styles.Address>
-                                        <Styles.Item style={{ width: "100%" }}>{i.address}</Styles.Item>
-                                        <Styles.Item style={{ width: "100%" }}>{i.city}, {i.state}, {i.zipcode}</Styles.Item>
-                                    </Styles.Address>
-                                    <Styles.Item>{this.type[i.type]}</Styles.Item>
-                                    <Styles.Item>{moment(i.date).format('MMMM Do YYYY, [at] h:mm a')}</Styles.Item>
-                                </Styles.Row>
-                            ))
+                            this.state.bookings.map((i) => {
+                                if (i.type === this.props.filter || this.props.filter === 'all') {
+                                    return (
+                                        <Styles.Row>
+                                            <Styles.Item>{i.name}</Styles.Item>
+                                            <Styles.Item>{i.email}</Styles.Item>
+                                            <Styles.Address>
+                                                <Styles.Item style={{ width: "100%" }}>{i.address}</Styles.Item>
+                                                <Styles.Item style={{ width: "100%" }}>{i.city}, {i.state}, {i.zipcode}</Styles.Item>
+                                            </Styles.Address>
+                                            <Styles.Item>{this.type[i.type]}</Styles.Item>
+                                            <Styles.Item>{moment(i.date).format('MMMM Do YYYY, [at] h:mm a')}</Styles.Item>
+                                        </Styles.Row>
+                                    )
+                                }
+                            })
                             :
                             null
                     }

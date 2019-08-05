@@ -48,7 +48,7 @@ export default class Modal extends React.Component {
                 this.setState({ [name]: value })
                 break;
 
-        }
+        }87
     };
 
     checkErrors = () => {
@@ -93,13 +93,14 @@ export default class Modal extends React.Component {
                 <Styles.Modal>
                     <Styles.Header>
                         Create Booking
-                </Styles.Header>
-                    {
+                    </Styles.Header>
+
+                    {/* {
                         this.state.error &&
                         <Styles.FormItem>
                             <Styles.ItemHeader style={{ fontWeight: 'bold', color: 'red' }}>Items in red have errors</Styles.ItemHeader>
                         </Styles.FormItem>
-                    }
+                    } */}
                     <Styles.Form>
                         <Styles.FormHalf style={{ paddingRight: "20px" }}>
                             <Styles.FormItem>
@@ -158,7 +159,10 @@ export default class Modal extends React.Component {
                     </Styles.Form>
                     <Styles.BookingsBtn style={{ float: "right" }} onClick={this.createBooking}>
                         Create Booking
-                </Styles.BookingsBtn>
+                    </Styles.BookingsBtn>
+                    <Styles.BookingsBtn style={{ float: "right" }} onClick={this.props.toggleModal}>
+                        Close
+                    </Styles.BookingsBtn>
                 </Styles.Modal>
             </Styles.ModalContainer>
         )
