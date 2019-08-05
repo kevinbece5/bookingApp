@@ -9,7 +9,7 @@ const db = require('./db');
 app.use(cors())
 db.setup()
     .catch((err) => {
-        console.log(err)
+        throw err
     })
 app.use(bodyParser.json());
 
