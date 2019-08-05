@@ -13,12 +13,10 @@ module.exports = {
 
         post: async (body) => {
             const { date, name, email, address, city, state, zipcode, type, time } = body;
-            console.log('time', time);
             const scheduledDate = moment(date).startOf('day').add(time.slice(0, 2), 'hours').add(time.slice(3), 'minutes').format();
             try {
                 return await mysql.queryAsync(`INSERT INTO bookings.bookings (date, name, email, address, city, state, zipcode, type) VALUES ('${scheduledDate}', '${name}', '${email}', '${address}', '${city}',  '${state}', '${zipcode}', '${type}' )`)
             } catch (err) {
-                console.log('err', err);
                 throw err;
             }
         }
