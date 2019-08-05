@@ -58,6 +58,6 @@ export const BookingsBtn = styled.button`
     color: #333333;
     width: 128px;
     height: 29px;
-    background-color: #F29648;
+    background-color: ${({ disable }) => disable ? "#F29648" : "grey"};
     border-radius: 5px;
 `;

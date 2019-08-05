@@ -80,10 +80,10 @@ export default class Bookings extends React.Component {
             <Styles.Container>
                 <Styles.Header>
                     <Styles.HeaderItem>Page {this.state.page / 20}</Styles.HeaderItem>
-                    <Styles.BookingsBtn onClick={() => this.navigatePages('prev')}>
+                    <Styles.BookingsBtn disable={this.state.page - 20 > 0} onClick={() => this.navigatePages('prev')}>
                         Previous Page
                     </Styles.BookingsBtn>
-                    <Styles.BookingsBtn onClick={() => this.navigatePages('next')}>
+                    <Styles.BookingsBtn disable={this.state.page < this.state.displayedBookings.length} onClick={() => this.navigatePages('next')}>
                         Next Page
                     </Styles.BookingsBtn>
                 </Styles.Header>
