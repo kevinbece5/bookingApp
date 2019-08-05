@@ -102,3 +102,7 @@ export const Li = styled.li`
     flex-basis: auto;
     list-style: none;
 `;
+
+export const HeaderButton = styled.div`
+    padding-right: 10px;
+`;

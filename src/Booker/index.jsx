@@ -27,19 +27,19 @@ export default class Booker extends React.Component {
                 <Styles.Header>
                     Bookings
                 </Styles.Header>
-                <Styles.ButtonContainer>
+                <Styles.HeaderButton>
                     <Styles.ItemHeader>Filter by Booking Type</Styles.ItemHeader>
                     <Styles.Select name='filter' value={this.state.filter} id="type-select" onChange={this.updateItem}>
                         <Styles.Option name='filter' value="all">All</Styles.Option>
                         <Styles.Option name='filter' value="houseKeeping">Housekeeping</Styles.Option>
                         <Styles.Option name='filter' value="dogWalking">Dog Walking</Styles.Option>
                     </Styles.Select>
-                </Styles.ButtonContainer>
-                <Styles.ButtonContainer>
+                </Styles.HeaderButton>
+                <Styles.HeaderButton >
                     <Styles.BookingsBtn onClick={this.toggleModal}>
                         Create Booking
                 </Styles.BookingsBtn>
-                </Styles.ButtonContainer>
+                </Styles.HeaderButton>
                 {this.state.toggleModal ?
                     <Modal updateBookings={this.props.updateBookings} toggleModal={this.toggleModal} />
                     :

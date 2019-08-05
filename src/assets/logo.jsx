@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Logo = ({ fill1 = '#53ae93', fill2 = '#254442' }) => (
-    <svg style={{ width: "100%" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 468 155.96">
+    <svg style={{ width: "100%", paddingTop: "10px" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 468 155.96">
         <defs>
             <style>.cls-1{fill1}.cls-2{fill2}</style>
         </defs>
