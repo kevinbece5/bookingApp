@@ -42,10 +42,7 @@ export default class Bookings extends React.Component {
     updateList = () => {
         return axios.get('/getBookings')
             .then(({ data }) => {
-                let sorted = data.sort((a, b) => {
-                    return moment(a.date).format('YYYYMMDDHHmm') - moment(b.date).format('YYYYMMDDHHmm')
-                });
-                this.setState({ bookings: sorted }, this.updateDisplayedList)
+                this.setState({ bookings: data }, this.updateDisplayedList)
             })
     }
 

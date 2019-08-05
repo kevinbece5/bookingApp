@@ -1,4 +1,5 @@
 const models = require('./models');
+const moment = require('moment');
 
 module.exports = {
     bookings: {
@@ -8,7 +9,10 @@ module.exports = {
                 if (!query) {
                     res.sendStatus(404);
                 } else {
-                    res.send(query)
+                    let sorted = query.sort((a, b) => {
+                        return moment(a.date).format('YYYYMMDDHHmm') - moment(b.date).format('YYYYMMDDHHmm')
+                    });
+                    res.send(sorted)
                 }
             } catch (err) {
                 res.sendStatus(400);
