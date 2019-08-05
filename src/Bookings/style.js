@@ -29,6 +29,7 @@ export const Table = styled.div`
     flex-direction: column;
     align-self: center;
     width: 98%;
+    margin-bottom: 100px;
 `;
 
 export const Row = styled.div`
